@@ -49,9 +49,9 @@ X_test_scaled = scaler.transform(X_test)
 
 # 训练多个模型
 models = {
-    'Random Forest': RandomForestClassifier(n_estimators=400, max_depth=30, min_samples_split=3, random_state=42, n_jobs=-1, verbose=0),
-    'LightGBM': LGBMClassifier(n_estimators=500, max_depth=15, learning_rate=0.03, num_leaves=80, random_state=42, n_jobs=-1, verbose=-1),
-    'SVM': SVC(kernel='rbf', C=150, gamma='scale', random_state=42)
+    #'Random Forest': RandomForestClassifier(n_estimators=400, max_depth=30, min_samples_split=3, random_state=42, n_jobs=-1, verbose=0),
+    'LightGBM': LGBMClassifier(n_estimators=1000, max_depth=15, learning_rate=0.1, num_leaves=80, random_state=42, n_jobs=-1, verbose=-1),
+    #'SVM': SVC(kernel='rbf', C=150, gamma='scale', random_state=42)
 }
 
 results = {}
