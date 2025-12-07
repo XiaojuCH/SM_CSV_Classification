@@ -49,9 +49,9 @@ X_test_scaled = scaler.transform(X_test)
 
 # 训练多个模型
 models = {
-    #'Random Forest': RandomForestClassifier(n_estimators=400, max_depth=30, min_samples_split=3, random_state=42, n_jobs=-1, verbose=0),
-    'LightGBM': LGBMClassifier(n_estimators=1000, max_depth=15, learning_rate=0.1, num_leaves=80, random_state=42, n_jobs=-1, verbose=-1),
-    #'SVM': SVC(kernel='rbf', C=150, gamma='scale', random_state=42)
+    #'Random Forest': RandomForestClassifier(n_estimators=400, max_depth=30, min_samples_split=3, random_state=42, n_jobs=-1, verbose=0), #大概80%
+    'LightGBM': LGBMClassifier(n_estimators=1000, max_depth=15, learning_rate=0.1, num_leaves=80, random_state=42, n_jobs=-1, verbose=-1), #81.65
+    #'SVM': SVC(kernel='rbf', C=150, gamma='scale', random_state=42) # 大概79%
 }
 
 results = {}
@@ -77,8 +77,8 @@ for name, model in tqdm(models.items(), desc="训练模型"):
         'cv_std': cv_scores.std()
     }
 
-    print(f"\n✓ {name} 测试准确率: {accuracy:.4f} ({accuracy*100:.2f}%)")
-    print(f"✓ {name} 交叉验证准确率: {cv_scores.mean():.4f} (+/- {cv_scores.std():.4f})")
+    print(f"\n[OK] {name} 测试准确率: {accuracy:.4f} ({accuracy*100:.2f}%)")
+    print(f"[OK] {name} 交叉验证准确率: {cv_scores.mean():.4f} (+/- {cv_scores.std():.4f})")
     print(f"\n分类报告:\n{classification_report(y_test, y_pred)}")
 
 # 找出最佳模型
@@ -137,3 +137,45 @@ with open('results.txt', 'w', encoding='utf-8') as f:
     f.write(f"最终准确率: {best_accuracy:.4f} ({best_accuracy*100:.2f}%)\n")
 
 print("\n结果已保存到 results.txt")
+
+# 保存模型和预处理器
+import joblib
+
+print("\n保存模型文件...")
+
+# 1. 保存为Python pickle格式（用于Python加载）
+joblib.dump(best_model, 'lightgbm_model.pkl')
+joblib.dump(scaler, 'scaler.pkl')
+print("[OK] 已保存 lightgbm_model.pkl 和 scaler.pkl (Python格式)")
+
+# 2. 保存为LightGBM原生格式（用于C++加载）
+best_model.booster_.save_model('lightgbm_model.txt')
+print("[OK] 已保存 lightgbm_model.txt (LightGBM原生格式，可用于C++)")
+
+# 3. 保存scaler参数为JSON（用于C++实现标准化）
+import json
+scaler_params = {
+    'mean': scaler.mean_.tolist(),
+    'scale': scaler.scale_.tolist(),
+    'n_features': int(scaler.n_features_in_)
+}
+with open('scaler_params.json', 'w') as f:
+    json.dump(scaler_params, f, indent=2)
+print("[OK] 已保存 scaler_params.json (标准化参数，用于C++)")
+
+# 4. 保存类别映射
+label_mapping = {i: label for i, label in enumerate(labels)}
+with open('label_mapping.json', 'w', encoding='utf-8') as f:
+    json.dump(label_mapping, f, indent=2, ensure_ascii=False)
+print("[OK] 已保存 label_mapping.json (类别映射)")
+
+print("\n" + "="*60)
+print("模型文件保存完成！")
+print("="*60)
+print("\n用于C++部署的文件:")
+print("  1. lightgbm_model.txt - LightGBM模型文件")
+print("  2. scaler_params.json - 特征标准化参数")
+print("  3. label_mapping.json - 类别映射表")
+print("\n用于Python加载的文件:")
+print("  1. lightgbm_model.pkl - 完整模型")
+print("  2. scaler.pkl - 标准化器")

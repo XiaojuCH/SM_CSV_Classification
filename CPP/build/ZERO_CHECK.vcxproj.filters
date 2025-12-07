@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Projects_\Qinghua_Project\基于光学特征分类\CPP\build\CMakeFiles\cfdc1cc6043ca0925cc618f44aa46e7d\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{BF1289A3-45E9-386E-8A25-3033FA38484C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

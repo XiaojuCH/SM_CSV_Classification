@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5DB2637A-897A-38EB-B1D9-24156EC6A093}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>TestLoadSpeed</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Projects_\Qinghua_Project\基于光学特征分类\CPP\build\bin\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">TestLoadSpeed.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">TestLoadSpeed</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Projects_\Qinghua_Project\基于光学特征分类\CPP\build\bin\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">TestLoadSpeed.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">TestLoadSpeed</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Projects_\Qinghua_Project\基于光学特征分类\CPP\build\bin\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">TestLoadSpeed.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">TestLoadSpeed</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Projects_\Qinghua_Project\基于光学特征分类\CPP\build\bin\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">TestLoadSpeed.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">TestLoadSpeed</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\onnxruntime\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\onnxruntime\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\onnxruntime\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>Copying onnxruntime.dll for TestLoadSpeed	Copying D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/lightgbm_model.onnx to output directory	Copying D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/scaler_params.json to output directory	Copying D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/label_mapping.json to output directory</Message>
+      <Command>setlocal
+D:\CMake\bin\cmake.exe -E copy_if_different C:/onnxruntime/lib/onnxruntime.dll D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/bin/Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\CMake\bin\cmake.exe -E copy_if_different D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/lightgbm_model.onnx D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/bin/Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\CMake\bin\cmake.exe -E copy_if_different D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/scaler_params.json D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/bin/Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\CMake\bin\cmake.exe -E copy_if_different D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/label_mapping.json D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/bin/Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>C:\onnxruntime\lib\onnxruntime.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/Debug/TestLoadSpeed.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/bin/Debug/TestLoadSpeed.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\onnxruntime\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\onnxruntime\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\onnxruntime\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>Copying onnxruntime.dll for TestLoadSpeed	Copying D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/lightgbm_model.onnx to output directory	Copying D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/scaler_params.json to output directory	Copying D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/label_mapping.json to output directory</Message>
+      <Command>setlocal
+D:\CMake\bin\cmake.exe -E copy_if_different C:/onnxruntime/lib/onnxruntime.dll D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/bin/Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\CMake\bin\cmake.exe -E copy_if_different D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/lightgbm_model.onnx D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/bin/Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\CMake\bin\cmake.exe -E copy_if_different D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/scaler_params.json D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/bin/Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\CMake\bin\cmake.exe -E copy_if_different D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/label_mapping.json D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/bin/Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>C:\onnxruntime\lib\onnxruntime.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/Release/TestLoadSpeed.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/bin/Release/TestLoadSpeed.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\onnxruntime\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\onnxruntime\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\onnxruntime\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>Copying onnxruntime.dll for TestLoadSpeed	Copying D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/lightgbm_model.onnx to output directory	Copying D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/scaler_params.json to output directory	Copying D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/label_mapping.json to output directory</Message>
+      <Command>setlocal
+D:\CMake\bin\cmake.exe -E copy_if_different C:/onnxruntime/lib/onnxruntime.dll D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/bin/MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\CMake\bin\cmake.exe -E copy_if_different D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/lightgbm_model.onnx D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/bin/MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\CMake\bin\cmake.exe -E copy_if_different D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/scaler_params.json D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/bin/MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\CMake\bin\cmake.exe -E copy_if_different D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/label_mapping.json D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/bin/MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>C:\onnxruntime\lib\onnxruntime.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/MinSizeRel/TestLoadSpeed.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/bin/MinSizeRel/TestLoadSpeed.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\onnxruntime\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\onnxruntime\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\onnxruntime\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>Copying onnxruntime.dll for TestLoadSpeed	Copying D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/lightgbm_model.onnx to output directory	Copying D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/scaler_params.json to output directory	Copying D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/label_mapping.json to output directory</Message>
+      <Command>setlocal
+D:\CMake\bin\cmake.exe -E copy_if_different C:/onnxruntime/lib/onnxruntime.dll D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/bin/RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\CMake\bin\cmake.exe -E copy_if_different D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/lightgbm_model.onnx D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/bin/RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\CMake\bin\cmake.exe -E copy_if_different D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/scaler_params.json D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/bin/RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\CMake\bin\cmake.exe -E copy_if_different D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/label_mapping.json D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/bin/RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>C:\onnxruntime\lib\onnxruntime.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/RelWithDebInfo/TestLoadSpeed.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/bin/RelWithDebInfo/TestLoadSpeed.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Projects_\Qinghua_Project\基于光学特征分类\CPP\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\CMake\bin\cmake.exe -SD:/Projects_/Qinghua_Project/基于光学特征分类/CPP -BD:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build --check-stamp-file D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\CMake\share\cmake-4.0\Modules\CMakeCXXCompiler.cmake.in;D:\CMake\share\cmake-4.0\Modules\CMakeCXXCompilerABI.cpp;D:\CMake\share\cmake-4.0\Modules\CMakeCXXInformation.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeCompilerIdDetection.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineCXXCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineCompilerABI.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineCompilerId.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineCompilerSupport.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineRCCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineSystem.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeFindBinUtils.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeGenericSystem.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeInitializeConfigs.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeParseImplicitIncludeInfo.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeParseImplicitLinkInfo.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeParseLibraryArchitecture.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeRCCompiler.cmake.in;D:\CMake\share\cmake-4.0\Modules\CMakeRCInformation.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeSystem.cmake.in;D:\CMake\share\cmake-4.0\Modules\CMakeSystemSpecificInformation.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeSystemSpecificInitialize.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeTestCXXCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeTestCompilerCommon.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeTestRCCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\ADSP-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\ARMCC-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\ARMClang-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\AppleClang-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Borland-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Clang-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Cray-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\CrayClang-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\GHS-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\IAR-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Intel-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\MSVC-CXX.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\MSVC-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\MSVC.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\NVHPC-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\OrangeC-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\PGI-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\PathScale-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\SCO-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\TI-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\TIClang-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Tasking-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Watcom-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\CompilerId\VS-10.vcxproj.in;D:\CMake\share\cmake-4.0\Modules\Internal\CMakeCXXLinkerInformation.cmake;D:\CMake\share\cmake-4.0\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\CMake\share\cmake-4.0\Modules\Internal\CMakeDetermineLinkerId.cmake;D:\CMake\share\cmake-4.0\Modules\Internal\FeatureTesting.cmake;D:\CMake\share\cmake-4.0\Modules\Linker\MSVC-CXX.cmake;D:\CMake\share\cmake-4.0\Modules\Linker\MSVC.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Linker\Windows-MSVC.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Windows-Determine-CXX.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Windows-Initialize.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Windows.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\WindowsPaths.cmake;D:\Projects_\Qinghua_Project\基于光学特征分类\CPP\build\CMakeFiles\4.0.0-rc2\CMakeCXXCompiler.cmake;D:\Projects_\Qinghua_Project\基于光学特征分类\CPP\build\CMakeFiles\4.0.0-rc2\CMakeRCCompiler.cmake;D:\Projects_\Qinghua_Project\基于光学特征分类\CPP\build\CMakeFiles\4.0.0-rc2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Projects_\Qinghua_Project\基于光学特征分类\CPP\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\CMake\bin\cmake.exe -SD:/Projects_/Qinghua_Project/基于光学特征分类/CPP -BD:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build --check-stamp-file D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\CMake\share\cmake-4.0\Modules\CMakeCXXCompiler.cmake.in;D:\CMake\share\cmake-4.0\Modules\CMakeCXXCompilerABI.cpp;D:\CMake\share\cmake-4.0\Modules\CMakeCXXInformation.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeCompilerIdDetection.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineCXXCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineCompilerABI.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineCompilerId.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineCompilerSupport.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineRCCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineSystem.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeFindBinUtils.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeGenericSystem.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeInitializeConfigs.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeParseImplicitIncludeInfo.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeParseImplicitLinkInfo.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeParseLibraryArchitecture.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeRCCompiler.cmake.in;D:\CMake\share\cmake-4.0\Modules\CMakeRCInformation.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeSystem.cmake.in;D:\CMake\share\cmake-4.0\Modules\CMakeSystemSpecificInformation.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeSystemSpecificInitialize.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeTestCXXCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeTestCompilerCommon.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeTestRCCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\ADSP-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\ARMCC-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\ARMClang-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\AppleClang-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Borland-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Clang-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Cray-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\CrayClang-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\GHS-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\IAR-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Intel-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\MSVC-CXX.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\MSVC-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\MSVC.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\NVHPC-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\OrangeC-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\PGI-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\PathScale-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\SCO-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\TI-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\TIClang-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Tasking-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Watcom-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\CompilerId\VS-10.vcxproj.in;D:\CMake\share\cmake-4.0\Modules\Internal\CMakeCXXLinkerInformation.cmake;D:\CMake\share\cmake-4.0\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\CMake\share\cmake-4.0\Modules\Internal\CMakeDetermineLinkerId.cmake;D:\CMake\share\cmake-4.0\Modules\Internal\FeatureTesting.cmake;D:\CMake\share\cmake-4.0\Modules\Linker\MSVC-CXX.cmake;D:\CMake\share\cmake-4.0\Modules\Linker\MSVC.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Linker\Windows-MSVC.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Windows-Determine-CXX.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Windows-Initialize.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Windows.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\WindowsPaths.cmake;D:\Projects_\Qinghua_Project\基于光学特征分类\CPP\build\CMakeFiles\4.0.0-rc2\CMakeCXXCompiler.cmake;D:\Projects_\Qinghua_Project\基于光学特征分类\CPP\build\CMakeFiles\4.0.0-rc2\CMakeRCCompiler.cmake;D:\Projects_\Qinghua_Project\基于光学特征分类\CPP\build\CMakeFiles\4.0.0-rc2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Projects_\Qinghua_Project\基于光学特征分类\CPP\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\CMake\bin\cmake.exe -SD:/Projects_/Qinghua_Project/基于光学特征分类/CPP -BD:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build --check-stamp-file D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\CMake\share\cmake-4.0\Modules\CMakeCXXCompiler.cmake.in;D:\CMake\share\cmake-4.0\Modules\CMakeCXXCompilerABI.cpp;D:\CMake\share\cmake-4.0\Modules\CMakeCXXInformation.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeCompilerIdDetection.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineCXXCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineCompilerABI.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineCompilerId.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineCompilerSupport.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineRCCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineSystem.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeFindBinUtils.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeGenericSystem.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeInitializeConfigs.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeParseImplicitIncludeInfo.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeParseImplicitLinkInfo.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeParseLibraryArchitecture.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeRCCompiler.cmake.in;D:\CMake\share\cmake-4.0\Modules\CMakeRCInformation.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeSystem.cmake.in;D:\CMake\share\cmake-4.0\Modules\CMakeSystemSpecificInformation.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeSystemSpecificInitialize.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeTestCXXCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeTestCompilerCommon.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeTestRCCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\ADSP-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\ARMCC-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\ARMClang-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\AppleClang-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Borland-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Clang-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Cray-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\CrayClang-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\GHS-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\IAR-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Intel-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\MSVC-CXX.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\MSVC-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\MSVC.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\NVHPC-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\OrangeC-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\PGI-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\PathScale-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\SCO-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\TI-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\TIClang-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Tasking-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Watcom-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\CompilerId\VS-10.vcxproj.in;D:\CMake\share\cmake-4.0\Modules\Internal\CMakeCXXLinkerInformation.cmake;D:\CMake\share\cmake-4.0\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\CMake\share\cmake-4.0\Modules\Internal\CMakeDetermineLinkerId.cmake;D:\CMake\share\cmake-4.0\Modules\Internal\FeatureTesting.cmake;D:\CMake\share\cmake-4.0\Modules\Linker\MSVC-CXX.cmake;D:\CMake\share\cmake-4.0\Modules\Linker\MSVC.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Linker\Windows-MSVC.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Windows-Determine-CXX.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Windows-Initialize.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Windows.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\WindowsPaths.cmake;D:\Projects_\Qinghua_Project\基于光学特征分类\CPP\build\CMakeFiles\4.0.0-rc2\CMakeCXXCompiler.cmake;D:\Projects_\Qinghua_Project\基于光学特征分类\CPP\build\CMakeFiles\4.0.0-rc2\CMakeRCCompiler.cmake;D:\Projects_\Qinghua_Project\基于光学特征分类\CPP\build\CMakeFiles\4.0.0-rc2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Projects_\Qinghua_Project\基于光学特征分类\CPP\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\CMake\bin\cmake.exe -SD:/Projects_/Qinghua_Project/基于光学特征分类/CPP -BD:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build --check-stamp-file D:/Projects_/Qinghua_Project/基于光学特征分类/CPP/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\CMake\share\cmake-4.0\Modules\CMakeCXXCompiler.cmake.in;D:\CMake\share\cmake-4.0\Modules\CMakeCXXCompilerABI.cpp;D:\CMake\share\cmake-4.0\Modules\CMakeCXXInformation.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeCompilerIdDetection.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineCXXCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineCompilerABI.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineCompilerId.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineCompilerSupport.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineRCCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeDetermineSystem.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeFindBinUtils.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeGenericSystem.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeInitializeConfigs.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeParseImplicitIncludeInfo.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeParseImplicitLinkInfo.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeParseLibraryArchitecture.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeRCCompiler.cmake.in;D:\CMake\share\cmake-4.0\Modules\CMakeRCInformation.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeSystem.cmake.in;D:\CMake\share\cmake-4.0\Modules\CMakeSystemSpecificInformation.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeSystemSpecificInitialize.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeTestCXXCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeTestCompilerCommon.cmake;D:\CMake\share\cmake-4.0\Modules\CMakeTestRCCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\ADSP-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\ARMCC-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\ARMClang-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\AppleClang-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Borland-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Clang-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Cray-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\CrayClang-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\GHS-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\IAR-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Intel-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\MSVC-CXX.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\MSVC-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\MSVC.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\NVHPC-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\OrangeC-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\PGI-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\PathScale-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\SCO-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\TI-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\TIClang-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Tasking-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\Watcom-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;D:\CMake\share\cmake-4.0\Modules\CompilerId\VS-10.vcxproj.in;D:\CMake\share\cmake-4.0\Modules\Internal\CMakeCXXLinkerInformation.cmake;D:\CMake\share\cmake-4.0\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\CMake\share\cmake-4.0\Modules\Internal\CMakeDetermineLinkerId.cmake;D:\CMake\share\cmake-4.0\Modules\Internal\FeatureTesting.cmake;D:\CMake\share\cmake-4.0\Modules\Linker\MSVC-CXX.cmake;D:\CMake\share\cmake-4.0\Modules\Linker\MSVC.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Linker\Windows-MSVC.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Windows-Determine-CXX.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Windows-Initialize.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\Windows.cmake;D:\CMake\share\cmake-4.0\Modules\Platform\WindowsPaths.cmake;D:\Projects_\Qinghua_Project\基于光学特征分类\CPP\build\CMakeFiles\4.0.0-rc2\CMakeCXXCompiler.cmake;D:\Projects_\Qinghua_Project\基于光学特征分类\CPP\build\CMakeFiles\4.0.0-rc2\CMakeRCCompiler.cmake;D:\Projects_\Qinghua_Project\基于光学特征分类\CPP\build\CMakeFiles\4.0.0-rc2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Projects_\Qinghua_Project\基于光学特征分类\CPP\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\Projects_\Qinghua_Project\基于光学特征分类\CPP\test_load_speed.cpp" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="D:\Projects_\Qinghua_Project\基于光学特征分类\CPP\build\ZERO_CHECK.vcxproj">
+      <Project>{323945DD-3120-38F0-8669-DF0CA297B58F}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
