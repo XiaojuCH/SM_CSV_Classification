@@ -378,7 +378,7 @@ target_compile_definitions(ClassifierDLL PRIVATE
 **解决**：
 1. 下载CMake：https://cmake.org/download/
 2. 安装时选择"Add CMake to system PATH"
-3. 或手动添加到PATH：`C:\Program Files\CMake\bin`
+3. 或手动添加到PATH：`C:/Program Files/CMake/bin`
 
 ### Q2: 找不到ONNX Runtime
 

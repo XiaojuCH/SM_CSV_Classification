@@ -27,7 +27,7 @@ C# WPF 调用 LightGBM 分类器 DLL 的完整指南。
 
 1. 下载最新版本：https://github.com/microsoft/onnxruntime/releases
 2. 下载 `onnxruntime-win-x64-*.zip`
-3. 解压到 `C:\onnxruntime`
+3. 解压到 `C:/onnxruntime`
 
 ### 步骤 2: 配置 CMake
 
@@ -49,7 +49,7 @@ cmake --build build --config Release
 
 ### 步骤 4: 查找生成的文件
 
-编译完成后，在 `build\bin\Release\` 目录下会生成：
+编译完成后，在 `build/bin/Release/` 目录下会生成：
 
 ```
 build/bin/Release/
@@ -90,18 +90,18 @@ build/bin/Release/
 
 **Debug 模式：**
 ```bash
-copy ..\CPP\build\bin\Release\ClassifierDLL.dll bin\x64\Debug\net6.0-windows\
-copy ..\CPP\build\bin\Release\onnxruntime.dll bin\x64\Debug\net6.0-windows\
-copy ..\CPP\build\bin\Release\lightgbm_model.onnx bin\x64\Debug\net6.0-windows\
-copy ..\CPP\build\bin\Release\scaler_params.json bin\x64\Debug\net6.0-windows\
-copy ..\CPP\build\bin\Release\label_mapping.json bin\x64\Debug\net6.0-windows\
+copy ../CPP/build/bin/Release/ClassifierDLL.dll bin/x64/Debug/net6.0-windows/
+copy ../CPP/build/bin/Release/onnxruntime.dll bin/x64/Debug/net6.0-windows/
+copy ../CPP/build/bin/Release/lightgbm_model.onnx bin/x64/Debug/net6.0-windows/
+copy ../CPP/build/bin/Release/scaler_params.json bin/x64/Debug/net6.0-windows/
+copy ../CPP/build/bin/Release/label_mapping.json bin/x64/Debug/net6.0-windows/
 ```
 
 **Release 模式：**
 ```bash
-copy ..\CPP\build\bin\Release\*.dll bin\x64\Release\net6.0-windows\
-copy ..\CPP\build\bin\Release\*.onnx bin\x64\Release\net6.0-windows\
-copy ..\CPP\build\bin\Release\*.json bin\x64\Release\net6.0-windows\
+copy ../CPP/build/bin/Release/*.dll bin/x64/Release/net6.0-windows/
+copy ../CPP/build/bin/Release/*.onnx bin/x64/Release/net6.0-windows/
+copy ../CPP/build/bin/Release/*.json bin/x64/Release/net6.0-windows/
 ```
 
 **提示**: 可以在项目属性中设置这些文件为"复制到输出目录"，这样每次编译都会自动复制。
@@ -154,9 +154,9 @@ using (var classifier = new Classifier())
     );
 
     // 批量预测 CSV 文件
-    var results = classifier.PredictFromCSV(@"D:\data\TEST.csv");
+    var results = classifier.PredictFromCSV(@"D:/data/TEST.csv");
 
-    Console.WriteLine($"总共处理了 {results.SampleCount} 个样本\n");
+    Console.WriteLine($"总共处理了 {results.SampleCount} 个样本/n");
 
     // 显示每个样本的结果
     for (int i = 0; i < results.SampleCount; i++)
@@ -313,7 +313,7 @@ cd CPP
 cmake --build build --config Release
 
 # 4. 复制新的 DLL 到 WPF 项目
-copy build\bin\Release\ClassifierDLL.dll ..\WPF_Classifier_Demo\bin\x64\Debug\net6.0-windows\
+copy build/bin/Release/ClassifierDLL.dll ../WPF_Classifier_Demo/bin/x64/Debug/net6.0-windows/
 
 # 5. 重新运行 WPF 程序
 ```
@@ -349,17 +349,17 @@ python train_classifier.py
 python export_to_onnx.py
 
 # 2. 复制新模型到 C++ 项目
-copy lightgbm_model.onnx CPP\
-copy scaler_params.json CPP\
-copy label_mapping.json CPP\
+copy lightgbm_model.onnx CPP/
+copy scaler_params.json CPP/
+copy label_mapping.json CPP/
 
 # 3. 重新编译 C++ 项目（会自动复制模型文件）
 cd CPP
 cmake --build build --config Release
 
 # 4. 复制到 WPF 项目
-copy build\bin\Release\*.onnx ..\WPF_Classifier_Demo\bin\x64\Debug\net6.0-windows\
-copy build\bin\Release\*.json ..\WPF_Classifier_Demo\bin\x64\Debug\net6.0-windows\
+copy build/bin/Release/*.onnx ../WPF_Classifier_Demo/bin/x64/Debug/net6.0-windows/
+copy build/bin/Release/*.json ../WPF_Classifier_Demo/bin/x64/Debug/net6.0-windows/
 
 # 5. 重新运行 WPF 程序测试新模型
 ```
@@ -380,7 +380,7 @@ cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DONNXRUNTIME_DIR=C:/onnxruntime
 cmake --build build --config Release
 
 # 4. 复制 DLL 到 WPF 项目
-copy build\bin\Release\ClassifierDLL.dll ..\WPF_Classifier_Demo\bin\x64\Debug\net6.0-windows\
+copy build/bin/Release/ClassifierDLL.dll ../WPF_Classifier_Demo/bin/x64/Debug/net6.0-windows/
 ```
 
 ### 场景5：更换 ONNX Runtime 版本
@@ -389,7 +389,7 @@ copy build\bin\Release\ClassifierDLL.dll ..\WPF_Classifier_Demo\bin\x64\Debug\ne
 
 ```bash
 # 1. 下载新版本的 ONNX Runtime
-# 2. 解压到 C:\onnxruntime（覆盖旧版本）
+# 2. 解压到 C:/onnxruntime（覆盖旧版本）
 
 # 3. 删除旧的构建目录
 cd CPP
@@ -400,7 +400,7 @@ cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DONNXRUNTIME_DIR=C:/onnxruntime
 cmake --build build --config Release
 
 # 5. 复制新的 DLL 到 WPF 项目
-copy build\bin\Release\*.dll ..\WPF_Classifier_Demo\bin\x64\Debug\net6.0-windows\
+copy build/bin/Release/*.dll ../WPF_Classifier_Demo/bin/x64/Debug/net6.0-windows/
 ```
 
 ---
@@ -427,13 +427,13 @@ cmake --build build --config Release
 
 # === 第三部分：运行 WPF 程序 ===
 # 5. 编译 WPF 项目
-cd ..\WPF_Classifier_Demo
+cd ../WPF_Classifier_Demo
 dotnet build -c Debug
 
 # 6. 复制 DLL 和模型文件
-copy ..\CPP\build\bin\Release\*.dll bin\x64\Debug\net6.0-windows\
-copy ..\CPP\build\bin\Release\*.onnx bin\x64\Debug\net6.0-windows\
-copy ..\CPP\build\bin\Release\*.json bin\x64\Debug\net6.0-windows\
+copy ../CPP/build/bin/Release/*.dll bin/x64/Debug/net6.0-windows/
+copy ../CPP/build/bin/Release/*.onnx bin/x64/Debug/net6.0-windows/
+copy ../CPP/build/bin/Release/*.json bin/x64/Debug/net6.0-windows/
 
 # 7. 运行程序
 dotnet run
@@ -448,7 +448,7 @@ dotnet run
 **原因：** DLL 不在程序目录或平台不匹配。
 
 **解决方案：**
-1. 检查 DLL 是否在 `bin\x64\Debug\net6.0-windows\` 目录
+1. 检查 DLL 是否在 `bin/x64/Debug/net6.0-windows/` 目录
 2. 确保编译的是 **x64** 平台（不是 x86 或 AnyCPU）
 3. 检查 DLL 是否被杀毒软件拦截
 

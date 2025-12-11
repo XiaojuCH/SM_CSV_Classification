@@ -98,7 +98,7 @@ python export_to_onnx.py
 
 1. 下载最新版本：https://github.com/microsoft/onnxruntime/releases
 2. 下载 `onnxruntime-win-x64-*.zip`
-3. 解压到 `C:\onnxruntime`
+3. 解压到 `C:/onnxruntime`
 
 #### 编译 C++ 项目
 
@@ -121,13 +121,13 @@ cmake --build build --config Release
 #### 运行命令行程序
 
 ```bash
-cd build\bin\Release
+cd build/bin/Release
 
 # 预测 CSV 文件
-.\SimpleClassifier.exe path\to\data.csv
+./SimpleClassifier.exe path/to/data.csv
 
 # 示例
-.\SimpleClassifier.exe ..\..\..\TEST.csv
+./SimpleClassifier.exe ../../../TEST.csv
 ```
 
 ---
@@ -142,7 +142,7 @@ cd build\bin\Release
 
 1. **用 Visual Studio 打开项目**
    ```
-   WPF_Classifier_Demo\ClassifierDemo.csproj
+   WPF_Classifier_Demo/ClassifierDemo.csproj
    ```
 
 2. **设置平台为 x64**
@@ -154,9 +154,9 @@ cd build\bin\Release
 4. **复制 DLL 和模型文件**
    ```bash
    # 复制到输出目录（根据你的编译配置调整路径）
-   copy ..\CPP\build\bin\Release\*.dll bin\x64\Debug\net6.0-windows\
-   copy ..\CPP\build\bin\Release\*.onnx bin\x64\Debug\net6.0-windows\
-   copy ..\CPP\build\bin\Release\*.json bin\x64\Debug\net6.0-windows\
+   copy ../CPP/build/bin/Release/*.dll bin/x64/Debug/net6.0-windows/
+   copy ../CPP/build/bin/Release/*.onnx bin/x64/Debug/net6.0-windows/
+   copy ../CPP/build/bin/Release/*.json bin/x64/Debug/net6.0-windows/
    ```
 
 5. **运行程序**
@@ -202,7 +202,7 @@ cd CPP
 cmake --build build --config Release
 
 # 3. 如果修改了 DLL，需要复制到 WPF 项目
-copy build\bin\Release\ClassifierDLL.dll ..\WPF_Classifier_Demo\bin\x64\Debug\net6.0-windows\
+copy build/bin/Release/ClassifierDLL.dll ../WPF_Classifier_Demo/bin/x64/Debug/net6.0-windows/
 
 # 4. 关闭正在运行的 WPF 程序（如果有）
 
@@ -248,17 +248,17 @@ python train_classifier.py
 python export_to_onnx.py
 
 # 3. 复制新模型到 C++ 项目
-copy lightgbm_model.onnx CPP\
-copy scaler_params.json CPP\
-copy label_mapping.json CPP\
+copy lightgbm_model.onnx CPP/
+copy scaler_params.json CPP/
+copy label_mapping.json CPP/
 
 # 4. 重新编译 C++ 项目（会自动复制模型文件到 build 目录）
 cd CPP
 cmake --build build --config Release
 
 # 5. 复制到 WPF 项目
-copy build\bin\Release\*.onnx ..\WPF_Classifier_Demo\bin\x64\Debug\net6.0-windows\
-copy build\bin\Release\*.json ..\WPF_Classifier_Demo\bin\x64\Debug\net6.0-windows\
+copy build/bin/Release/*.onnx ../WPF_Classifier_Demo/bin/x64/Debug/net6.0-windows/
+copy build/bin/Release/*.json ../WPF_Classifier_Demo/bin/x64/Debug/net6.0-windows/
 
 # 6. 重新运行 WPF 程序测试新模型
 ```
@@ -279,7 +279,7 @@ cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DONNXRUNTIME_DIR=C:/onnxruntime
 cmake --build build --config Release
 
 # 4. 复制 DLL 到 WPF 项目
-copy build\bin\Release\ClassifierDLL.dll ..\WPF_Classifier_Demo\bin\x64\Debug\net6.0-windows\
+copy build/bin/Release/ClassifierDLL.dll ../WPF_Classifier_Demo/bin/x64/Debug/net6.0-windows/
 ```
 
 ### 场景5：更换 ONNX Runtime 版本
@@ -288,7 +288,7 @@ copy build\bin\Release\ClassifierDLL.dll ..\WPF_Classifier_Demo\bin\x64\Debug\ne
 
 ```bash
 # 1. 下载新版本的 ONNX Runtime
-# 2. 解压到 C:\onnxruntime（覆盖旧版本）
+# 2. 解压到 C:/onnxruntime（覆盖旧版本）
 
 # 3. 删除旧的构建目录
 cd CPP
@@ -299,7 +299,7 @@ cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DONNXRUNTIME_DIR=C:/onnxruntime
 cmake --build build --config Release
 
 # 5. 复制新的 DLL 到 WPF 项目
-copy build\bin\Release\*.dll ..\WPF_Classifier_Demo\bin\x64\Debug\net6.0-windows\
+copy build/bin/Release/*.dll ../WPF_Classifier_Demo/bin/x64/Debug/net6.0-windows/
 ```
 
 ---
@@ -312,7 +312,7 @@ copy build\bin\Release\*.dll ..\WPF_Classifier_Demo\bin\x64\Debug\net6.0-windows
 
 **解决方案：**
 1. 下载最新版本的 ONNX Runtime (1.19.2+)
-2. 解压到 `C:\onnxruntime`
+2. 解压到 `C:/onnxruntime`
 3. 删除 `CPP/build` 目录
 4. 重新配置和编译：
    ```bash
@@ -328,9 +328,9 @@ copy build\bin\Release\*.dll ..\WPF_Classifier_Demo\bin\x64\Debug\net6.0-windows
 **解决方案：**
 ```bash
 cd WPF_Classifier_Demo
-copy ..\CPP\build\bin\Release\*.dll bin\x64\Debug\net6.0-windows\
-copy ..\CPP\build\bin\Release\*.onnx bin\x64\Debug\net6.0-windows\
-copy ..\CPP\build\bin\Release\*.json bin\x64\Debug\net6.0-windows\
+copy ../CPP/build/bin/Release/*.dll bin/x64/Debug/net6.0-windows/
+copy ../CPP/build/bin/Release/*.onnx bin/x64/Debug/net6.0-windows/
+copy ../CPP/build/bin/Release/*.json bin/x64/Debug/net6.0-windows/
 ```
 
 ### Q3: WPF 程序提示"初始化失败: 无法打开标准化参数文件"
@@ -358,8 +358,8 @@ copy ..\CPP\build\bin\Release\*.json bin\x64\Debug\net6.0-windows\
 **解决方案：**
 ```bash
 # 检查路径是否正确
-dir C:\onnxruntime\include
-dir C:\onnxruntime\lib
+dir C:/onnxruntime/include
+dir C:/onnxruntime/lib
 
 # 重新配置
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DONNXRUNTIME_DIR=C:/onnxruntime

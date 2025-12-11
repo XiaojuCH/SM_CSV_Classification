@@ -13,9 +13,9 @@
 3. **编译项目**：点击"生成" → "生成解决方案"
 4. **复制文件**：
    ```bash
-   copy ..\CPP\build\bin\Release\*.dll bin\x64\Debug\net6.0-windows\
-   copy ..\CPP\build\bin\Release\*.onnx bin\x64\Debug\net6.0-windows\
-   copy ..\CPP\build\bin\Release\*.json bin\x64\Debug\net6.0-windows\
+   copy ../CPP/build/bin/Release/*.dll bin/x64/Debug/net6.0-windows/
+   copy ../CPP/build/bin/Release/*.onnx bin/x64/Debug/net6.0-windows/
+   copy ../CPP/build/bin/Release/*.json bin/x64/Debug/net6.0-windows/
    ```
 5. **运行程序**：按 F5
 
@@ -24,9 +24,9 @@
 ```bash
 cd WPF_Classifier_Demo
 dotnet build -c Debug
-copy ..\CPP\build\bin\Release\*.dll bin\x64\Debug\net6.0-windows\
-copy ..\CPP\build\bin\Release\*.onnx bin\x64\Debug\net6.0-windows\
-copy ..\CPP\build\bin\Release\*.json bin\x64\Debug\net6.0-windows\
+copy ../CPP/build/bin/Release/*.dll bin/x64/Debug/net6.0-windows/
+copy ../CPP/build/bin/Release/*.onnx bin/x64/Debug/net6.0-windows/
+copy ../CPP/build/bin/Release/*.json bin/x64/Debug/net6.0-windows/
 dotnet run
 ```
 
@@ -54,10 +54,10 @@ dotnet run
 ```bash
 # 1. 关闭 WPF 程序
 # 2. 重新编译 DLL
-cd ..\CPP
+cd ../CPP
 cmake --build build --config Release
 # 3. 复制新 DLL
-copy build\bin\Release\ClassifierDLL.dll ..\WPF_Classifier_Demo\bin\x64\Debug\net6.0-windows\
+copy build/bin/Release/ClassifierDLL.dll ../WPF_Classifier_Demo/bin/x64/Debug/net6.0-windows/
 # 4. 重新运行 WPF 程序
 ```
 

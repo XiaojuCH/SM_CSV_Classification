@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Projects_\\Qinghua_Project\\\u57FA\u4E8E\u5149\u5B66\u7279\u5F81\u5206\u7C7B\\WPF_Classifier_Demo\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D365A13E-B1BF-44E9-A8A4-FAF11FD4086C}|ClassifierDemo.csproj|d:\\projects_\\qinghua_project\\\u57FA\u4E8E\u5149\u5B66\u7279\u5F81\u5206\u7C7B\\wpf_classifier_demo\\classifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D365A13E-B1BF-44E9-A8A4-FAF11FD4086C}|ClassifierDemo.csproj|solutionrelative:classifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D365A13E-B1BF-44E9-A8A4-FAF11FD4086C}|ClassifierDemo.csproj|d:\\projects_\\qinghua_project\\\u57FA\u4E8E\u5149\u5B66\u7279\u5F81\u5206\u7C7B\\wpf_classifier_demo\\classifierdemo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{D365A13E-B1BF-44E9-A8A4-FAF11FD4086C}|ClassifierDemo.csproj|solutionrelative:classifierdemo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
@@ -19,15 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Classifier.cs",
+              "DocumentMoniker": "D:\\Projects_\\Qinghua_Project\\\u57FA\u4E8E\u5149\u5B66\u7279\u5F81\u5206\u7C7B\\WPF_Classifier_Demo\\Classifier.cs",
+              "RelativeDocumentMoniker": "Classifier.cs",
+              "ToolTip": "D:\\Projects_\\Qinghua_Project\\\u57FA\u4E8E\u5149\u5B66\u7279\u5F81\u5206\u7C7B\\WPF_Classifier_Demo\\Classifier.cs",
+              "RelativeToolTip": "Classifier.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACoAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T12:15:52.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ClassifierDemo.csproj",
               "DocumentMoniker": "D:\\Projects_\\Qinghua_Project\\\u57FA\u4E8E\u5149\u5B66\u7279\u5F81\u5206\u7C7B\\WPF_Classifier_Demo\\ClassifierDemo.csproj",
               "RelativeDocumentMoniker": "ClassifierDemo.csproj",
               "ToolTip": "D:\\Projects_\\Qinghua_Project\\\u57FA\u4E8E\u5149\u5B66\u7279\u5F81\u5206\u7C7B\\WPF_Classifier_Demo\\ClassifierDemo.csproj",
               "RelativeToolTip": "ClassifierDemo.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-07T16:29:38.91Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T16:29:38.91Z"
             }
           ]
         }
